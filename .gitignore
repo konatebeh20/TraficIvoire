@@ -1,0 +1,4 @@
+# Ignorer node_modules
+frontend/node_modules/
+TraficIvoire_api/venv/
+
