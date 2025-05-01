@@ -10,11 +10,18 @@ from geopy.distance import geodesic
 import os
 from dotenv import load_dotenv
 
+from ressources.tracking import register_tracking_route
+
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
+
+
+# Ensuite, enregistre ta route de tracking
+register_tracking_route(app)
+
 
 # Configure Swagger documentation
 api = Api(
@@ -90,6 +97,10 @@ class TrafficPrediction(Resource):
             
         except Exception as e:
             return {'error': str(e)}, 400
+
+@app.route("/")
+def home():
+    return "Backend TraficIvoire opérationnel !"
 
 @routes_ns.route('/optimize')
 class RouteOptimization(Resource):

@@ -1,6 +1,24 @@
+# Ignore les dépendances Angular et Python
+frontend/node_modules/
+TraficIvoire_api/venv/
+__pycache__/
+*.pyc
+.env
+*.pyo
+*.pyd
+*.db
+.DS_Store
+*.egg-info
+*.egg
+
 node_modules/
 dist/
-.env
+build/
+coverage/
+
+venv/
+__pycache__/
+*.pyc
 
 # Ignorer node_modules
 frontend/node_modules/
